@@ -1,0 +1,148 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient">
+
+
+    <!-- Logo ose Imazh -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:src="@drawable/top"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <!-- Teksti Kryesor -->
+    <TextView
+        android:id="@+id/getStartedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Started"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/logoImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+
+        android:layout_marginTop="16dp" />
+
+    <!-- Fusha për emrin e plotë -->
+    <EditText
+        android:id="@+id/fullNameInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Full name"
+        app:layout_constraintTop_toBottomOf="@id/getStartedText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingStart="8dp"
+        android:drawableEnd="@drawable/user"
+        android:paddingEnd="8dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColorHint="#9E9E9E"
+        android:layout_marginTop="16dp" />
+
+
+    <!-- Fusha për email -->
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Valid email"
+        android:inputType="textEmailAddress"
+        android:drawableEnd="@drawable/mail"
+        app:layout_constraintTop_toBottomOf="@id/fullNameInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColorHint="#9E9E9E"
+        android:layout_marginTop="8dp" />
+
+    <!-- Fusha për numrin e telefonit -->
+    <EditText
+        android:id="@+id/phoneInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Phone number"
+        android:inputType="phone"
+        android:drawableEnd="@drawable/smartphone"
+        app:layout_constraintTop_toBottomOf="@id/emailInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColorHint="#9E9E9E"
+        android:layout_marginTop="8dp" />
+
+    <!-- Fusha për password -->
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Strong Password"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/phoneInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingStart="8dp"
+        android:drawableEnd="@drawable/lock"
+        android:paddingEnd="8dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColorHint="#9E9E9E"
+        android:layout_marginTop="8dp" />
+
+    <!-- Checkbox për kushtet -->
+    <CheckBox
+        android:id="@+id/termsCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I agree to the Terms and Conditions"
+        app:layout_constraintTop_toBottomOf="@id/passwordInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Butoni për Regjistrim -->
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        app:layout_constraintTop_toBottomOf="@id/termsCheckbox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Link për login -->
+    <TextView
+        android:id="@+id/loginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already a member? Log In"
+        android:textColor="#03A9F4"
+        app:layout_constraintTop_toBottomOf="@id/registerButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

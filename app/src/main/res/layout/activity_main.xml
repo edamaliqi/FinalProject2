@@ -1,0 +1,96 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient">
+
+
+    <!-- Logo ose Imazh -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="00dp"
+        android:layout_height="150dp"
+        android:src="@drawable/top"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <!-- Teksti mirëseardhje -->
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome back"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/logoImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Fusha e Email-it -->
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Enter your email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/welcomeText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:drawableEnd="@drawable/mail"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColorHint="#9E9E9E"
+        android:layout_marginTop="16dp" />
+
+    <!-- Fusha e Password-it -->
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/emailInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:drawableEnd="@drawable/lock"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColorHint="#9E9E9E"
+        android:layout_marginTop="8dp" />
+
+    <!-- Button Login -->
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        app:layout_constraintTop_toBottomOf="@id/passwordInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Link për regjistrim -->
+    <TextView
+        android:id="@+id/registerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Member? Register now"
+        android:textColor="#03A9F4"
+        app:layout_constraintTop_toBottomOf="@id/loginButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
